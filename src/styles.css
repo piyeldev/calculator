@@ -14,7 +14,8 @@
 }
 
 .calc-list {
-    padding: 3% 5%;
+    padding: 1% 5%;
+    
 }
 .hd-txt {
     font-weight: bold;
@@ -28,12 +29,43 @@
     align-items: center;
     display: flex;
     border-radius: 30px;
+    box-sizing: border-box;
 }
-.cards {
+
+.cards{
     padding: 8%;
     border-radius: 40px;
     margin-bottom: 5%;
+    display: inline-block;
+    transition: transform  0.3s ease;
+}
+
+.cards:hover{
+    background-color: rgb(92, 92, 253);
+    transform: scale(1.05);
+    text-decoration: none;
+    color: white;
 }
 .links {
     text-decoration: none;
 }
+
+.touchables {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
+.col {
+    display: flex;
+
+}
+.col1 {
+    margin-left: 8%;
+    justify-content: right;
+}
+.col2 {
+    margin-right: 8%;
+    justify-content: left;
+}
+
