@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BMI Calculator</title>
-    <link rel="stylesheet" href="../src/bmi-calc-styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../src/bmi-calc-styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
     <main>
-        <section class="nav-sec">
-            <a href="../index.html" class="back-btn">
-                <div class="btn-container">
-                    <i class="bi bi-arrow-left back"></i>
-                </div>
-            </a>
-            <h1 class="title justify-content-center align-items-center ">BMI Calculator</h1>
-        </section>
-        <section class="calculator">
-            <div class="row">
-                <div class="col fields">
-                    <div class="field-container height-field-container">
-                        <p class="label height-label">Height (cm) <span class="required"> *</span></p>
-                        <input type="number" placeholder="Input your height..." name="height" id="height" class="field" max="300" min="10">
-                    </div>
-                    <div class="field-container weight-field-container">
-                        <p class="weight-label label">Weight (kg) <span class="required"> *</span></p>
-                        <input placeholder="Input your weight..." type="number" name="weight" id="weight" class="field" max="300" min="10">
-                    </div>
-                    <div id="error-place"></div>
-                    <div class="convert-btn">
-                        <input id="convert" type="button" value="Convert">
-                    </div>
-                    <div class="formula-view">
-                        <p id="mathjax-formula">
-                            \[BMI = {weight (kg) \over height (m)^2}\]
-                        </p>
-                    </div>
-                </div>
-                <div class="col answer">Hello</div>
+      <section class="nav-sec">
+        <a href="../index.html" class="back-btn">
+          <div class="btn-container">
+            <i class="bi bi-arrow-left back"></i>
+          </div>
+        </a>
+        <h1 class="title justify-content-center align-items-center">
+          BMI Calculator
+        </h1>
+      </section>
+      <section class="calculator">
+        <div class="row">
+          <div class="col fields">
+            <div class="select-unit nest-inline">
+              <p>Select Unit</p>
+              <p>Height</p>
+              <select name="unit-height" id="unit-selector-height">
+                <option value="meters">Centimeter (cm)</option>
+                <option value="meters">Meter (m)</option>
+                <option value="meters">Feet (ft)</option>
+              </select>
+              <p>Weight</p>
+              <select name="unit-weight" id="unit-selector-weight">
+                <option value="kilogram">Kilogram (kg)</option>
+                <option value="pounds">Pounds (lbs)</option>
+              </select>
             </div>
-            
-        </section>
+            <div class="row d-flex">
+              <div class="field-container height-field-container col-9">
+                <p class="label height-label">
+                  Height (cm) <span class="required"> *</span>
+                </p>
+                <input
+                  type="number"
+                  placeholder="Input your height..."
+                  name="height"
+                  id="height"
+                  class="field"
+                  max="300"
+                  min="10"
+                />
+              </div>
+              <!-- <a href="" class="switch-unit-btn-height switch-unit-btn col-2">
+                <div class="col switch-unit-container">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    <p class="change-unit">Change <br />Unit</p>
+                  </div>
+              </a> -->
+            </div>
+            <div class="row">
+              <div class="col-9 field-container weight-field-container">
+                <p class="weight-label label">
+                  Weight (kg) <span class="required"> *</span>
+                </p>
+                <input
+                  placeholder="Input your weight..."
+                  type="number"
+                  name="weight"
+                  id="weight"
+                  class="field"
+                  max="300"
+                  min="10"
+                />
+              </div>
+              <!-- <a href="" class="switch-unit-btn-weight switch-unit-btn col-2">
+                <div class="col switch-unit-container">
+                    <i class="bi bi-arrow-clockwise"></i>
+                    <p class="change-unit">Change <br />Unit</p>
+                  </div>
+              </a> -->
+            </div>
+            <div id="error-place"></div>
+            <div class="convert-btn">
+              <input id="convert" type="button" value="Convert" />
+            </div>
+            <div class="formula-view">
+              <p id="mathjax-formula">
+                \[BMI = {weight (kg) \over height (m)^2}\]
+              </p>
+            </div>
+          </div>
+          <div class="col2 col-md-5 answer">Hello</div>
+        </div>
+      </section>
     </main>
-
-</body>
-<script src="../src/script.js"></script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  </body>
+  <script src="../src/script.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
 </html>
