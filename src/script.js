@@ -2,6 +2,8 @@ var convertBtn = document.getElementById("convert");
 var mathjaxFormula = document.getElementById("mathjax-formula");
 var weightVal = document.getElementById("weight");
 var heightVal = document.getElementById("height");
+var weight = true
+var height = false
 
 convertBtn.addEventListener("click", function () {
   var weight = weightVal.value;
@@ -45,4 +47,25 @@ function removeErrors() {
   errElementContainer.innerHTML = "";
 }
 
-function limits(weight, height) {}
+
+/** 
+ * A function that converts input into meters or kilograms
+ * 
+ * Use cm, kg, in, ft as unit .
+ * */
+function convert(number, unit, convertTo) {
+    
+}
+
+function chooseUnit(unit, number) {
+    switch(unit) {
+        case "cm":
+            break
+        case "in":
+            break
+        case "ft":
+            break
+        case "lbs":
+            break
+    }
+}
