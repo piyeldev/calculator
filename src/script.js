@@ -2,17 +2,21 @@ var convertBtn = document.getElementById("convert");
 var mathjaxFormula = document.getElementById("mathjax-formula");
 var weightVal = document.getElementById("weight");
 var heightVal = document.getElementById("height");
-var weight = true
-var height = false
+var unitSelectorHeight = document.getElementById("height-unit")
+var unitSelectorWeight = document.getElementById("weight-unit")
 
+function print(stringArg) {
+  console.log(stringArg)
+}
 convertBtn.addEventListener("click", function () {
   var weight = weightVal.value;
   var height = heightVal.value;
+  var convertedValues = converter(weight, height)
   removeErrors();
-  checkForFields(weight, height);
+  checkAndCalculate(convertedValues[0], convertedValues[1]);
 });
 
-function checkForFields(weight, height) {
+function checkAndCalculate(weight, height) {
   var errElement = document.createElement("span");
   errElement.className = "error";
   errElement.textContent = "Please fill out the fields";
@@ -30,14 +34,13 @@ function placeError(errElement) {
   errorPlace.appendChild(errElement);
 }
 function calculateBmi(weight, height) {
-  var convertHeightToMeters = height / 100;
   console.log("working!");
   console.log(
-    `Height: ${height} (${convertHeightToMeters} in meters) Weight: ${weight}`
+    `Height: ${height} Weight: ${weight}`
   );
-  var answer = weight / (convertHeightToMeters * convertHeightToMeters);
+  var answer = (weight / (height**2)).toFixed(2);
 
-  mathjaxFormula.textContent = `\\[BMI = {weight (kg) \\over height (m)^2}= {${weight}kg\\over${convertHeightToMeters}m^2} = ${answer}\\]`;
+  mathjaxFormula.textContent = `\\[BMI = {weight (kg) \\over height (m)^2}= {${weight}kg\\over${height}m^2} = ${answer}\\]`;
   MathJax.typeset();
 }
 
@@ -47,25 +50,44 @@ function removeErrors() {
   errElementContainer.innerHTML = "";
 }
 
+function converter(weight, height) {
+  var weightUnit = unitSelectorWeight.options[unitSelectorWeight.selectedIndex].text
+  var heightUnit = unitSelectorHeight.options[unitSelectorHeight.selectedIndex].text
+  console.log(`Weight Unit: ${weightUnit}, Height Unit ${heightUnit}`)
+  var convertedWeight
+  var convertedHeight
 
-/** 
- * A function that converts input into meters or kilograms
- * 
- * Use cm, kg, in, ft as unit .
- * */
-function convert(number, unit, convertTo) {
-    
-}
+  switch (weightUnit) {
+    case "Kilograms (kg)":
+      // just return kg
+      print("kilos")
+      convertedWeight = weight
+      break;
+    case "Pounds (lbs)":
+      // converts lbs to kg
+      convertedWeight = weight * 0.45359237
+      break;
+    case undefined || null:
+      console.log("error")
+      break;
+  }
 
-function chooseUnit(unit, number) {
-    switch(unit) {
-        case "cm":
-            break
-        case "in":
-            break
-        case "ft":
-            break
-        case "lbs":
-            break
-    }
+  switch (heightUnit) {
+    case "Meters (m)":
+      convertedHeight = height
+      break;
+    case "Centimeters (cm)":
+      convertedHeight = height / 100
+      break;
+    case "Inches (in)":
+      convertedHeight = height * 0.0254
+      break;
+    case undefined || null:
+      console.log("error")
+      break;
+  }
+
+  var values = [convertedWeight, convertedHeight]
+  console.log(values)
+  return values
 }
