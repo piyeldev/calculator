@@ -65,7 +65,7 @@ function converter(weight, height) {
       break;
     case "Pounds (lbs)":
       // converts lbs to kg
-      convertedWeight = weight * 0.45359237
+      convertedWeight = +(weight * 0.45359237).toFixed(2)
       break;
     case undefined || null:
       console.log("error")
@@ -80,7 +80,7 @@ function converter(weight, height) {
       convertedHeight = height / 100
       break;
     case "Inches (in)":
-      convertedHeight = height * 0.0254
+      convertedHeight = +(height * 0.0254).toFixed(2)
       break;
     case undefined || null:
       console.log("error")
