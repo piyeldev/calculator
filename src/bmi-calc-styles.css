@@ -151,4 +151,15 @@ mjx-container {
   margin-right: 30px;
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.meter {
+  background-color: grey;
+  margin: 20px;
+  height: 180%;
+  transform: translateY(20px);
+  border-radius: 100%;
+
 }
