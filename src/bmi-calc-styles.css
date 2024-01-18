@@ -161,5 +161,15 @@ mjx-container {
   height: 180%;
   transform: translateY(20px);
   border-radius: 100%;
+  /* overflow: hidden; */
+}
 
+.classifier-low {
+  height: 100%;
+  width: 100%;
+  color: rgb(255, 93, 93);
+  transform: rotateY(45deg)
+}
+.clear {
+  clear: both;
 }
