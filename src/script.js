@@ -5,6 +5,12 @@ var heightVal = document.getElementById("height");
 var unitSelectorHeight = document.getElementById("height-unit")
 var unitSelectorWeight = document.getElementById("weight-unit")
 
+
+var meterText = new CircleType(document.getElementById("meter-text"))
+meterText.radius(360)
+
+
+
 function print(stringArg) {
   console.log(stringArg)
 }
@@ -91,3 +97,4 @@ function converter(weight, height) {
   console.log(values)
   return values
 }
+

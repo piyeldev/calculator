@@ -156,12 +156,24 @@ mjx-container {
 }
 
 .meter {
-  background-color: grey;
   margin: 20px;
-  height: 180%;
-  transform: translateY(20px);
+  height: 188%;
   border-radius: 100%;
   /* overflow: hidden; */
+  position: relative;
+  background: conic-gradient(
+    rgb(0, 153, 255) 0%,
+    rgb(0, 153, 255) 15%, 
+    rgb(47, 255, 29) 15%,
+    rgb(47, 255, 29) 28%,
+    rgb(255, 243, 81) 25%,
+    rgb(255, 243, 81) 38%,
+    rgb(255, 141, 35) 38%,
+    rgb(255, 141, 35) 50%,
+    rgb(253, 65, 65) 50%,
+    rgb(253, 65, 65) 100%
+  );
+  transform: rotate(-120deg);
 }
 
 .classifier-low {
@@ -186,3 +198,4 @@ mjx-container {
     height: 60%;
   }
 }
+
