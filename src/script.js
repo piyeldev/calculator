@@ -6,9 +6,6 @@ var unitSelectorHeight = document.getElementById("height-unit")
 var unitSelectorWeight = document.getElementById("weight-unit")
 
 
-var meterText = new CircleType(document.getElementById("meter-text"))
-meterText.radius(360)
-
 
 
 function print(stringArg) {
