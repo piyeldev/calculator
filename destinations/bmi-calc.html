@@ -46,7 +46,11 @@
                     max="300"
                     min="10"
                   />
-                  <select name="unit-height" id="height-unit" class="unit-selector height-unit-selector">
+                  <select
+                    name="unit-height"
+                    id="height-unit"
+                    class="unit-selector height-unit-selector"
+                  >
                     <option value="centimeter">Centimeters (cm)</option>
                     <option value="meter">Meters (m)</option>
                     <option value="inch">Inches (in)</option>
@@ -60,16 +64,20 @@
                   Weight <span class="required"> *</span>
                 </p>
                 <div class="nest-inline">
-                    <input
-                  placeholder="Input your weight..."
-                  type="number"
-                  name="weight"
-                  id="weight"
-                  class="field"
-                  max="300"
-                  min="10"
-                />
-                <select name="unit-weight" id="weight-unit" class="unit-selector">
+                  <input
+                    placeholder="Input your weight..."
+                    type="number"
+                    name="weight"
+                    id="weight"
+                    class="field"
+                    max="300"
+                    min="10"
+                  />
+                  <select
+                    name="unit-weight"
+                    id="weight-unit"
+                    class="unit-selector"
+                  >
                     <option value="kilograms">Kilograms (kg)</option>
                     <option value="pounds">Pounds (lbs)</option>
                   </select>
@@ -87,10 +95,35 @@
             </div>
           </div>
           <div class="col2 col-md-6 answer">
-            <h1 class="your-bmi-is">Your BMI is: </h1>
+            <h1 class="your-bmi-is">Your BMI is:</h1>
             <div class="bmi-meter">
-              <div class="meter">
-              </div>
+              <div class="meter"></div>
+              <!-- <svg
+              class="pointer-point"
+              xmlns="http://www.w3.org/2000/svg"
+              width="200"
+              height="100"
+            >
+              <path d="M0,50 A50,50 0 0,1 100,50" fill="black" />
+            </svg> -->
+              <svg
+                class="semicircle-guide"
+                xmlns="http://www.w3.org/2000/svg"
+                width="auto"
+                height="auto"
+                version="1.1"
+              >
+                <path
+                  class="label-path"
+                  d="M 0,340 A 50,50 0 0,1 564,361"
+                  fill="black"
+                />
+                <text width="1000">
+                  <textPath xlink:href=".label-path">
+                    sup sup sup
+                  </textPath>
+                </text>
+              </svg>
             </div>
           </div>
         </div>
