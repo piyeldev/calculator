@@ -15,6 +15,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+    <script src="../src/circletype.min.js"></script>
+
   </head>
   <body>
     <main>
@@ -29,7 +31,7 @@
         </h1>
       </section>
       <section class="calculator">
-        <div class="row">
+        <div class="row main">
           <div class="col fields">
             <div class="row">
               <div class="field-container height-field-container col-9">
@@ -97,7 +99,12 @@
           <div class="col2 col-md-6 answer">
             <h1 class="your-bmi-is">Your BMI is:</h1>
             <div class="bmi-meter">
-              <div class="meter"></div>
+              <div class="meter">
+                <p class="label-background"></p>
+                <p id="underweight-p">>18.5 18.5-24.9 25.0-29.9 30.0-34.9</p>
+                <div class="center"></div>
+              </div>
+
               <!-- <svg
               class="pointer-point"
               xmlns="http://www.w3.org/2000/svg"
@@ -106,23 +113,7 @@
             >
               <path d="M0,50 A50,50 0 0,1 100,50" fill="black" />
             </svg> -->
-              <svg
-                class="semicircle-guide"
-                xmlns="http://www.w3.org/2000/svg"
-                
-                version="1.1"
-              >
-                <path
-                  id="label-path"
-                  d="M 0 275 A 260 277.5 0 0 1 515 286 Z"
-                  fill="transparent"
-                />
-                <text width="1000">
-                  <textPath class="label-text" xlink:href="#label-path">
-                    >18.5 18.5-24.9 25-29.9 30-34.9 >35.0 
-                  </textPath>
-                </text>
-              </svg>
+              
             </div>
           </div>
         </div>
@@ -136,5 +127,4 @@
     async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
   ></script>
-  <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
-</html>
+  </html>

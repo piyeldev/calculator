@@ -147,7 +147,7 @@ mjx-container {
 /* meter css */
 .bmi-meter {
   border-bottom: 5px solid black;
-  height: 100%;
+  height: 45vh;
   margin-right: 30px;
   background-color: rgb(228, 228, 228);
   border-radius: 10px;
@@ -161,45 +161,52 @@ html,body{
   padding: 0;
   overflow-x: hidden;
   }
+
+.answer {
+  max-height: 300%;
+  border: 0;
+}
+@media screen and (max-width: 1167px) {
+  .bmi-meter {
+    height: 35vh;
+  }
   
+}
+@media screen and (max-width: 937px) {
+  .bmi-meter {
+    height: 25vh;
+  }
+}
+@media screen and (max-width: 869px) {
+  .bmi-meter {
+    height: 15vh;
+  }
+}
+
+.main {
+  height: 100vh;
+}
 .meter {
   margin: 20px;
   height: 188%;
   border-radius: 100%;
   /* overflow: hidden; */
-  position: relative;
+  position: sticky;
   background: conic-gradient(
-    rgb(0, 153, 255) 0%,
-    rgb(0, 153, 255) 15%, 
-    rgb(47, 255, 29) 15%,
-    rgb(47, 255, 29) 28%,
+    rgb(255, 243, 81) 0%,
+    rgb(255, 243, 81) 15%, 
+    rgb(255, 141, 35) 15%,
+    rgb(255, 141, 35) 28%,
     rgb(255, 243, 81) 25%,
     rgb(255, 243, 81) 38%,
-    rgb(255, 141, 35) 38%,
-    rgb(255, 141, 35) 50%,
-    rgb(253, 65, 65) 50%,
-    rgb(253, 65, 65) 100%
+    rgb(33, 142, 214) 38%,
+    rgb(33, 142, 214) 85%,
+    rgb(35, 255, 64) 85%,
+    rgb(35, 255, 64) 100%
   );
-  transform: rotate(-120deg);
-}
-
-.answer {
-  border: 0;
-}
-@media screen and (max-width: 1167px) {
-  .bmi-meter {
-    height: 80%;
-  }
-}
-@media screen and (max-width: 937px) {
-  .bmi-meter {
-    height: 70%;
-  }
-}
-@media screen and (max-width: 869px) {
-  .bmi-meter {
-    height: 60%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pointer-point {
@@ -211,15 +218,34 @@ html,body{
 
 .semicircle-guide {
   position: absolute;
-  top: 17%;
-  left: 12%;
+  top: 5%;
+  left: 10.5%;
+  width: 100;
+  background-size: contain;
   overflow: visible;
 }
 
-.label-text {
-  word-spacing: 70px;
-  font-size: 160%;
-  fill: white;
-  stroke: black ;
-  font-weight: 900;
+#underweight-p {
+  position: absolute;
+  top: 8.5vw;
+  font-size: 1.3vw;
+  word-spacing: 5vw;
+  font-weight: bold;
+  color: white;
+}
+
+.label-background {
+  background-color: rgba(0, 0, 0, 0.562);
+  width: 30vw;
+  height: 55vh;
+  border-radius: 50%;
+}
+
+.center {
+  background-color: black;
+  width: 10vw;
+  height: 20vh;
+  position: absolute;
+  top: 35vh;
+  border-radius: 50%;
 }

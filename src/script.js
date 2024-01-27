@@ -5,6 +5,9 @@ var heightVal = document.getElementById("height");
 var unitSelectorHeight = document.getElementById("height-unit")
 var unitSelectorWeight = document.getElementById("weight-unit")
 
+var text = document.getElementById("underweight-p")
+const bent = new CircleType(text)
+bent.radius(200)
 
 function print(stringArg) {
   console.log(stringArg)
