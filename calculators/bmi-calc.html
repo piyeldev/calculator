@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+    <script src="../src/circletype.min.js"></script>
   </head>
   <body>
     <main>
@@ -29,8 +30,8 @@
         </h1>
       </section>
       <section class="calculator">
-        <div class="row">
-          <div class="col fields">
+        <div class="row main">
+          <div class="col-md-5 fields">
             <div class="row">
               <div class="field-container height-field-container col-9">
                 <p class="label height-label">
@@ -46,7 +47,11 @@
                     max="300"
                     min="10"
                   />
-                  <select name="unit-height" id="height-unit" class="unit-selector height-unit-selector">
+                  <select
+                    name="unit-height"
+                    id="height-unit"
+                    class="unit-selector height-unit-selector"
+                  >
                     <option value="centimeter">Centimeters (cm)</option>
                     <option value="meter">Meters (m)</option>
                     <option value="inch">Inches (in)</option>
@@ -60,16 +65,20 @@
                   Weight <span class="required"> *</span>
                 </p>
                 <div class="nest-inline">
-                    <input
-                  placeholder="Input your weight..."
-                  type="number"
-                  name="weight"
-                  id="weight"
-                  class="field"
-                  max="300"
-                  min="10"
-                />
-                <select name="unit-weight" id="weight-unit" class="unit-selector">
+                  <input
+                    placeholder="Input your weight..."
+                    type="number"
+                    name="weight"
+                    id="weight"
+                    class="field"
+                    max="300"
+                    min="10"
+                  />
+                  <select
+                    name="unit-weight"
+                    id="weight-unit"
+                    class="unit-selector"
+                  >
                     <option value="kilograms">Kilograms (kg)</option>
                     <option value="pounds">Pounds (lbs)</option>
                   </select>
@@ -85,12 +94,28 @@
                 \(BMI = {weight (kg) \over height (m)^2}\)
               </p>
             </div>
+            <div class="border"></div>
           </div>
-          <div class="col2 col-md-6 answer">
-            <h1 class="your-bmi-is">Your BMI is: </h1>
-            <div class="bmi-meter">
-              <div class="meter">
+
+          <div class="col answer">
+            <div class="answer-container">
+              <h1 class="your-bmi-is">Your BMI is:</h1>
+              <div id="result" class="result">0 kg/m²</div>
+              <div class="bmi-meter">
+                <img
+                  class="bmi-meter-img"
+                  src="../assets/Underweight Normal Overweight-Photoroom.png-Photoroom.png"
+                  alt="bmi-meter"
+                />
+                <img
+                  id="arrow"
+                  src="../assets/11-116338_simple-rounded-arrow-left-clip-art-simple-arrows-Photoroom.png-Photoroom.png"
+                  alt="arrow"
+                  class="arrow"
+                />
+                <div class="hide"></div>  
               </div>
+              
             </div>
           </div>
         </div>
@@ -104,5 +129,4 @@
     async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
   ></script>
-  <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
 </html>
