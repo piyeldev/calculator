@@ -9,7 +9,8 @@ A hobby project by me, <a href="github.com/piyeldev">piyeldev</a>, to challenge 
 - **and so much more, coming soon!!!**
 
 ## Status
-FINISHED <a href="https://piyeldev.github.io/calculator/destinations/bmi-calc.html">BMI Calculator</a>. (February 17, 2024)
+FINISHED <a href="https://piyeldev.github.io/calculator/destinations/bmi-calc.html">BMI Calculator</a>. (February 17, 2024).
+
 Currently finishing <a href="https://piyeldev.github.io/calculator/destinations/bmi-calc.html">Area Calculator</a>. (March 10, 2024)
 
 Progress' been slow, just looking forward to be consistent.
