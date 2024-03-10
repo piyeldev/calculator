@@ -189,7 +189,7 @@ input::-moz-inner-spin-button {
 
 /* -------------------------------- */
 .shape-disp-col, .calculation-column {
-  border:  1px solid red;
+/*   border:  1px solid red; */
     /* background-color: rgb(223, 223, 223); */
 }
 
