@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Area Calculator</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="../src/area-calc-styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="nav-sec">
+        <div class="container-nav">
+          <a
+            href="../index.html"
+            class="back-btn"
+          >
+            <div class="back-btn-container">
+              <i class="bi bi-arrow-left back" id="back-icon"></i>
+            </div>
+          </a>
+          <h1 class="title">Area Calculator</h1>
+        </div>
+      </section>
+      <section class="calculator">
+        <div class="row main-row">
+          <div class="col-md-6 calculation-column">
+            <div class="select-shape-container">
+              <div class="label-select-shape">Shape</div>
+              <select name="shape-select" id="shape-select">
+                <option value="rectangle">Rectangle</option>
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+                <option value="circle">Circle</option>
+                <option value="trapezoid">Trapezoid</option>
+
+              </select>
+            </div>
+            <div class="formula-container">
+              <div class="formula">\[ \boldsymbol{Area = Length • Width}\]</div>
+            </div>
+            <div class="text-fields-container">
+              <div class="col">
+                <div class="row field length-field-container">
+                  <div class="label-cont label-1">Length</div>
+                  <input
+                    type="number"
+                    name="length"
+                    id="length-field"
+                    placeholder="Enter Length"
+                    class="num-field"
+                  />
+                </div>
+                <div class="row field width-field-container">
+                  <div class="label-cont label-2">Width</div>
+                  <input
+                    placeholder="Enter Width"
+                    type="number"
+                    name="width"
+                    id="width-field"
+                    class="num-field"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="calculate-btn-container">
+                <input type="button" value="Calculate!" id="calculate-btn" class="calculate-btn">
+                <select name="unit" id="unit-selector" class="unit-selector">
+                    <option value="none">None</option>
+                    <option value="meters">Meters</option>
+                    <option value="cm">Centimeters</option>
+                    <option value="in">Inches</option>
+                </select>
+            </div>
+          </div>
+          <div class="col shape-disp-col">
+            <div class="shape-container">
+                <div class="width-txt">Width</div>
+                <div class="length-txt">Length</div>
+                <div class="shape">
+                </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+  <script src="../src/area-script.js"></script>
 </html>

@@ -1,0 +1,29 @@
+{
+    "shapes": [
+        {
+            "name": "rectangle",
+            "arguments": "length width",
+            "formula": "l*w"
+        },
+        {
+            "name": "square",
+            "arguments": "length",
+            "formula": "l**2"
+        },
+        {
+            "name": "triangle",
+            "arguments": "base height",
+            "formula": "(b*h)/2"
+        },
+        {
+            "name": "circle",
+            "arguments": "radius",
+            "formula": "Math.PI*(r**2)"
+        },
+        {
+            "name": "trapezoid",
+            "arguments": "base1 base2 height",
+            "formula": "((b1+b2)/2)*h"
+        }
+    ]
+}

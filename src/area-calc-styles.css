@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900;9..40,1000&display=swap");
+
+:root {
+  --normal-font-size: 160%;
+  --fields-background-color: #f1f1f1;
+}
+
+/* * { border: 1px solid red; } */
+
+* {
+  font-family: "DM Sans", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation Section */
+/* ----------------------------- */
+.back-btn {
+  text-decoration: none;
+  margin-left: 1vw;
+  width: fit-content;
+  height: fit-content;
+}
+.back-btn-container {
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-btn-container:hover,
+.back:hover {
+  background-color: black;
+  color: white;
+}
+.back {
+  font-size: 190%;
+  color: black;
+  text-align: center;
+  line-height: 0px;
+}
+
+.nav-sec {
+  display: flex;
+  align-items: center;
+  margin: 2% 2%;
+}
+
+.title {
+  padding: 1% 3%;
+  display: flex;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-sec {
+    margin: 3% 4%;
+  }
+  :root {
+    --normal-font-size: 120%;
+  }
+  .num-field::placeholder {
+    font-size: 90%;
+  }
+}
+
+.container-nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+/* ----------------------------- */
+
+.main-row {
+  padding: 0 6%;
+}
+.label-select-shape {
+  font-size: var(--normal-font-size);
+  padding-left: 10px;
+}
+#shape-select {
+  height: 50px;
+  width: 230px;
+  font-size: 120%;
+  padding-left: 15px;
+  background-color: var(--fields-background-color);
+  border: 1px solid black;
+}
+
+.formula-container {
+  margin: 5% 4%;
+}
+.formula {
+  font-size: 140%;
+}
+mjx-container {
+  text-align: left !important;
+}
+
+.text-fields-container {
+  margin: 0 2%;
+}
+.field {
+  width: 45%;
+}
+.width-field-container {
+  padding-top: 15px;
+}
+.label-cont {
+  font-size: var(--normal-font-size);
+}
+.num-field {
+  border-radius: 45px;
+  min-width: 250px;
+  height: 50px;
+  border: 2px solid black;
+  background-color: var(--fields-background-color);
+}
+.num-field:focus {
+  border: 2px solid #4e7fff;
+  outline: none !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input::-moz-outer-spin-button,
+input::-moz-inner-spin-button {
+  -moz-appearance: none;
+}
+.calculate-btn-container {
+  padding-top: 2vw;
+  display: flex;
+  align-items: center;
+}
+.calculate-btn {
+  height: 70px;
+  min-width: 200px;
+  /* width: 15vw; */
+  font-size: 190%;
+  border-top-left-radius: 45px;
+  border-bottom-left-radius: 45px;
+  border: 2px solid black;
+  background-color: white;
+}
+.calculate-btn:hover {
+  background-color: #4e7fff;
+  color: white;
+}
+.unit-selector {
+  margin-left: 5px;
+  height: 70px;
+  border-top-right-radius: 45px;
+  border-bottom-right-radius: 45px;
+  border: 2px solid black;
+  font-size: 130%;
+  padding-left: 15px;
+  background-color: var(--fields-background-color);
+}
+@media (max-width: 768px) {
+  .calculate-btn {
+    height: 50px;
+    font-size: 140%;
+    min-width: 180px;
+  }
+  .unit-selector {
+    height: 50px;
+  }
+  .calculate-btn-container {
+    padding-top: 3vw;
+  }
+}
+
+/* -------------------------------- */
+.shape-disp-col, .calculation-column {
+  border:  1px solid red;
+    /* background-color: rgb(223, 223, 223); */
+}
+
+.shape-container {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+    position: relative;
+}
+.shape {
+    height: 18vw;
+    width: 36vw;
+    background-color: #4e7fff;
+    border-top: 3px solid #FF3838;
+    border-left: 3px solid #FFD338;
+}
+.width-txt {
+    transform: rotate(-90deg);
+    font-size: var(--normal-font-size);
+}
+.length-txt {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    font-size: var(--normal-font-size);
+}
